@@ -8,7 +8,7 @@ The project defines a convenient class `HelpBook` that allows you to construct
 [well-known URLs](https://developer.apple.com/library/archive/documentation/Carbon/Conceptual/ProvidingUserAssitAppleHelp/appendix_b/appendixb.html#//apple_ref/doc/uid/TP30000903-CH210-TPXREF101)
 to navigate to anchors within the HelpBook.
 
-Note the additional `Info.plist` keys in both the App and the AppHelp bundle
+Note the additional `Info.plist` files in both the App and the AppHelp bundle
 targets that enumerate the additional keys and values you need to connect the
 HelpBook bundle to the main app.
 
