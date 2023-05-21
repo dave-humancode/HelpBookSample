@@ -6,8 +6,10 @@
 	<string>hbwr</string>
 	<key>HPDBookAccessPath</key>
 	<string>index.html</string>
-	<key>HPDBookIconPath</key>
-	<string>icon@2x.png</string>
+	<key>HPDBookIndexPath</key>
+	<string>AppHelp.helpindex</string>
+	<key>HPDBookCSIndexPath</key>
+	<string>AppHelp.cshelpindex</string>
 	<key>HPDBookKBProduct</key>
 	<string>app1</string>
 	<key>HPDBookTitle</key>
