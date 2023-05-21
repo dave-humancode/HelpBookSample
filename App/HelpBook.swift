@@ -33,36 +33,6 @@ class HelpBook {
         self.helpBookBundle = helpBookBundle
     }
 
-    private func open(url: URL) {
-#if os(iOS)
-        let app = UIApplication.shared
-        app.open(url)
-#elseif os(macOS)
-        let workspace = NSWorkspace.shared
-        workspace.open(url)
-#endif
-    }
-
-    private var helpBookIdentifier: String { get {
-        guard let identifier = self.helpBookBundle.bundleIdentifier else {
-            fatalError("HelpBook bundle does not have a bundle identifier")
-        }
-        return identifier
-    }}
-
-    private var appIdentifier: String { get {
-        guard let identifier = Bundle.main.bundleIdentifier else {
-            fatalError("Main bundle does not have a bundle identifier")
-        }
-        return identifier
-    }}
-
-    private func open(urlString: String) {
-        if let url = URL(string: urlString) {
-            open(url: url)
-        }
-    }
-
     /// Show the title page of this help book
     func show() {
         let urlString = "help:openbook=%22\(helpBookIdentifier)%22"
@@ -79,5 +49,37 @@ class HelpBook {
     func search(string: String) {
         let urlString = "help:search=%22\(string)%22%20bookID=%22\(helpBookIdentifier)%22"
         open(urlString: urlString)
+    }
+}
+
+fileprivate extension HelpBook {
+    func open(url: URL) {
+#if os(iOS)
+        let app = UIApplication.shared
+        app.open(url)
+#elseif os(macOS)
+        let workspace = NSWorkspace.shared
+        workspace.open(url)
+#endif
+    }
+
+    var helpBookIdentifier: String { get {
+        guard let identifier = self.helpBookBundle.bundleIdentifier else {
+            fatalError("HelpBook bundle does not have a bundle identifier")
+        }
+        return identifier
+    }}
+
+    var appIdentifier: String { get {
+        guard let identifier = Bundle.main.bundleIdentifier else {
+            fatalError("Main bundle does not have a bundle identifier")
+        }
+        return identifier
+    }}
+
+    func open(urlString: String) {
+        if let url = URL(string: urlString) {
+            open(url: url)
+        }
     }
 }
