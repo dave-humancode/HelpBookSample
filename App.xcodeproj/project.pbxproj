@@ -47,6 +47,7 @@
 		0802E90A2A19A68300508127 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = en; path = en.lproj/topic1.html; sourceTree = "<group>"; };
 		0802E9102A19AF6500508127 /* HelpBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpBook.swift; sourceTree = "<group>"; };
 		086DDE072A19D5C400F301C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		086DDE082A19D71E00F301C5 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				086DDE072A19D5C400F301C5 /* README.md */,
+				086DDE082A19D71E00F301C5 /* LICENSE */,
 				0802E8DB2A19A08200508127 /* App */,
 				0802E8F92A19A1AC00508127 /* AppHelp */,
 				0802E8DA2A19A08200508127 /* Products */,
