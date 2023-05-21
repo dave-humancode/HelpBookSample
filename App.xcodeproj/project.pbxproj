@@ -13,7 +13,20 @@
 		0802E8E42A19A08200508127 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0802E8E22A19A08200508127 /* Main.storyboard */; };
 		0802E8E62A19A08300508127 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0802E8E52A19A08300508127 /* Assets.xcassets */; };
 		0802E8E92A19A08300508127 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0802E8E72A19A08300508127 /* LaunchScreen.storyboard */; };
+		0802E8FC2A19A1CC00508127 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 0802E8FE2A19A1CC00508127 /* index.html */; };
+		0802E9012A19A25100508127 /* AppHelp.help in Resources */ = {isa = PBXBuildFile; fileRef = 0802E8F52A19A1A000508127 /* AppHelp.help */; };
+		0802E9062A19A59F00508127 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0802E9052A19A59F00508127 /* icon@2x.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0802E8FF2A19A24C00508127 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0802E8D12A19A08200508127 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0802E8F42A19A1A000508127;
+			remoteInfo = AppHelp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0802E8D92A19A08200508127 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +37,22 @@
 		0802E8E52A19A08300508127 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0802E8E82A19A08300508127 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0802E8EA2A19A08300508127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0802E8F02A19A08A00508127 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
+		0802E8F52A19A1A000508127 /* AppHelp.help */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppHelp.help; sourceTree = BUILT_PRODUCTS_DIR; };
+		0802E8FD2A19A1CC00508127 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = en; path = en.lproj/index.html; sourceTree = "<group>"; };
+		0802E9022A19A30600508127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0802E9052A19A59F00508127 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0802E8D62A19A08200508127 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0802E8F22A19A1A000508127 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				0802E8DB2A19A08200508127 /* App */,
+				0802E8F92A19A1AC00508127 /* AppHelp */,
 				0802E8DA2A19A08200508127 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				0802E8D92A19A08200508127 /* App.app */,
+				0802E8F52A19A1A000508127 /* AppHelp.help */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +83,7 @@
 		0802E8DB2A19A08200508127 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				0802E8F02A19A08A00508127 /* App.entitlements */,
 				0802E8DC2A19A08200508127 /* AppDelegate.swift */,
 				0802E8DE2A19A08200508127 /* SceneDelegate.swift */,
 				0802E8E02A19A08200508127 /* ViewController.swift */,
@@ -65,6 +93,16 @@
 				0802E8EA2A19A08300508127 /* Info.plist */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		0802E8F92A19A1AC00508127 /* AppHelp */ = {
+			isa = PBXGroup;
+			children = (
+				0802E9022A19A30600508127 /* Info.plist */,
+				0802E8FE2A19A1CC00508127 /* index.html */,
+				0802E9052A19A59F00508127 /* icon@2x.png */,
+			);
+			path = AppHelp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -81,11 +119,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				0802E9002A19A24C00508127 /* PBXTargetDependency */,
 			);
 			name = App;
 			productName = App;
 			productReference = 0802E8D92A19A08200508127 /* App.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0802E8F42A19A1A000508127 /* AppHelp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0802E8F62A19A1A000508127 /* Build configuration list for PBXNativeTarget "AppHelp" */;
+			buildPhases = (
+				0802E8F12A19A1A000508127 /* Sources */,
+				0802E8F22A19A1A000508127 /* Frameworks */,
+				0802E8F32A19A1A000508127 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppHelp;
+			productName = AppHelp;
+			productReference = 0802E8F52A19A1A000508127 /* AppHelp.help */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +154,9 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					0802E8D82A19A08200508127 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					0802E8F42A19A1A000508127 = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
@@ -116,6 +175,7 @@
 			projectRoot = "";
 			targets = (
 				0802E8D82A19A08200508127 /* App */,
+				0802E8F42A19A1A000508127 /* AppHelp */,
 			);
 		};
 /* End PBXProject section */
@@ -125,9 +185,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0802E9012A19A25100508127 /* AppHelp.help in Resources */,
 				0802E8E92A19A08300508127 /* LaunchScreen.storyboard in Resources */,
 				0802E8E62A19A08300508127 /* Assets.xcassets in Resources */,
 				0802E8E42A19A08200508127 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0802E8F32A19A1A000508127 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0802E8FC2A19A1CC00508127 /* index.html in Resources */,
+				0802E9062A19A59F00508127 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +214,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0802E8F12A19A1A000508127 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0802E9002A19A24C00508127 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0802E8F42A19A1A000508127 /* AppHelp */;
+			targetProxy = 0802E8FF2A19A24C00508127 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0802E8E22A19A08200508127 /* Main.storyboard */ = {
@@ -161,6 +246,14 @@
 				0802E8E82A19A08300508127 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0802E8FE2A19A1CC00508127 /* index.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0802E8FD2A19A1CC00508127 /* en */,
+			);
+			name = index.html;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -285,6 +378,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -301,9 +396,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = us.humancode.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -312,6 +410,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -328,9 +428,60 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = us.humancode.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+			};
+			name = Release;
+		};
+		0802E8F72A19A1A000508127 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppHelp/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = us.humancode.AppHelp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+				WRAPPER_EXTENSION = help;
+			};
+			name = Debug;
+		};
+		0802E8F82A19A1A000508127 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppHelp/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = us.humancode.AppHelp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+				WRAPPER_EXTENSION = help;
 			};
 			name = Release;
 		};
@@ -351,6 +502,15 @@
 			buildConfigurations = (
 				0802E8EE2A19A08300508127 /* Debug */,
 				0802E8EF2A19A08300508127 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0802E8F62A19A1A000508127 /* Build configuration list for PBXNativeTarget "AppHelp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0802E8F72A19A1A000508127 /* Debug */,
+				0802E8F82A19A1A000508127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
