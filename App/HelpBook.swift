@@ -15,22 +15,23 @@ import AppKit
 
 /// A HelpBook
 class HelpBook {
-    private let helpBookBundle: Bundle
+    private let helpBookIdentifier: String
 
     /// Initialize by name
     ///
     /// - Parameters:
-    ///   - bookName: Name of HelpBook
+    ///   - bookName: Name of HelpBook, without the `.help` extension
     ///   - bundle: The bundle the HelpBook resides in. Pass `nil` to use the
     ///             main bundle.
     init(bookName: String, bundle: Bundle?) {
         let bundle = bundle ?? Bundle.main
         guard let bundleURL = bundle.url(forResource: bookName, withExtension: "help"),
-              let helpBookBundle = Bundle(url: bundleURL)
+              let helpBookBundle = Bundle(url: bundleURL),
+              let helpBookIdentifier = helpBookBundle.bundleIdentifier
         else {
-            fatalError("Cannot open HelpBook named “\(bookName)”")
+            fatalError("Cannot find the identifier for the HelpBook named “\(bookName)”")
         }
-        self.helpBookBundle = helpBookBundle
+        self.helpBookIdentifier = helpBookIdentifier
     }
 
     /// Show the title page of this help book
@@ -62,13 +63,6 @@ fileprivate extension HelpBook {
         workspace.open(url)
 #endif
     }
-
-    var helpBookIdentifier: String { get {
-        guard let identifier = self.helpBookBundle.bundleIdentifier else {
-            fatalError("HelpBook bundle does not have a bundle identifier")
-        }
-        return identifier
-    }}
 
     var appIdentifier: String { get {
         guard let identifier = Bundle.main.bundleIdentifier else {
